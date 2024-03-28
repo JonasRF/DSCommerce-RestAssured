@@ -30,7 +30,7 @@ Exemplo básico utilização REST Assured
 
 ## Recursos importantes
 
-Dependência -Rest Assured-
+Dependência **Rest Assured**
 
 ```
 <dependency>
