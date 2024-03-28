@@ -15,7 +15,7 @@ Rest Assured
 - REST Assured é uma biblioteca usada para automatizar testes de API em aplicações, permitindo testar e validar serviços REST de uma forma simples.
 
 - Documentação oficial 
-https://rest-assured.io/
+	https://rest-assured.io/
 
 Exemplo básico utilização REST Assured
 - Para este exemplo, vamos considerar uma API para consultar partidas entre dois times, conforme a Figura (abaixo):
