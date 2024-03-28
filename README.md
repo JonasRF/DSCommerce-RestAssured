@@ -32,7 +32,7 @@ Exemplo básico utilização REST Assured
 
 Dependência -Rest Assured-
 
-´´´
+```
 <dependency>
 	<groupId>io.rest-assured</groupId>
 	<artifactId>rest-assured</artifactId>
