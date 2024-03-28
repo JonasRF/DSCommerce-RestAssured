@@ -38,16 +38,16 @@ Dependência -Rest Assured-
 	<artifactId>rest-assured</artifactId>
 	<scope>test</scope>
 </dependency>
-´´´
+```
 
 Dependência para permitir criar um objeto JSON a partir de um Map
 
-´´´
+```
 <dependency>
 	<groupId>com.googlecode.json-simple</groupId>
 	<artifactId>json-simple</artifactId>
 	<version>1.1.1</version>
 </dependency>
-´´´
+```
 
 
