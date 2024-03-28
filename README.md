@@ -2,8 +2,8 @@
 
 Visão geral sobre testes de API
 Contextualização
-  -- Testes de API são testes que executamos diretamente nos endpoints da nossa aplicação, de forma a validar comportamentos inesperados, evitando que usuários e aplicações desta API recebam resultados inesperados.
-  -- Por meio dos testes é possível avaliar critérios da API como funcionalidade, desempenho, confiabilidade e segurança.
+- Testes de API são testes que executamos diretamente nos endpoints da nossa aplicação, de forma a validar comportamentos inesperados, evitando que usuários e aplicações desta API recebam resultados inesperados.
+- Por meio dos testes é possível avaliar critérios da API como funcionalidade, desempenho, confiabilidade e segurança.
 Testes de API são um tipo de teste de integração
 Lembrando, que os testes de integração são chamados de testes em caixa preta, ou seja, baseado nos requisitos, de forma que especificamos as entradas e saídas da nossa API, buscando cobrir os cenários importantes.
 Vamos aprofundar nos testes de API usando duas ferramentas: MockMvc e Rest Assured
