@@ -28,7 +28,7 @@ Exemplo básico utilização REST Assured
 
 ![image](https://github.com/JonasRF/DSCommerce-RestAssured/assets/77034798/51e7bfa6-b56c-47dc-ac09-314b2e976457)
 
-##Recursos importantes
+## Recursos importantes
 
 Dependência -Rest Assured-
 
