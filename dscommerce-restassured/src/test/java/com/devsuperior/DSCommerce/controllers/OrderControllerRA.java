@@ -69,4 +69,56 @@ public class OrderControllerRA {
                 .body("items.name", hasItems("The Lord of the Rings", "Macbook Pro"))
                 .body("total", is(1431.0F));
     }
+    @Test
+    public void findByIdShouldReturnForbiddenWhenIdExistsAndClientLoggedAndOrderDoesNotBelongUser() {
+    Long otherOrderId = 2L;
+
+        given()
+                    .header("Content-type", "application/json")
+                    .header("Authorization", "Bearer " + clientToken)
+                    .accept(ContentType.JSON)
+                .when()
+                    .get("/orders/{id}", otherOrderId)
+                .then()
+                .statusCode(403);
+    }
+
+    @Test
+    public void findByIdShouldReturnResourceNotFoundWhenIdDoesNotExistAndAdminLogged() {
+
+        given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + adminToken)
+                .accept(ContentType.JSON)
+                .when()
+                .get("/orders/{id}", nonExistingOrderId)
+                .then()
+                .statusCode(404);
+    }
+
+    @Test
+    public void findByIdShouldReturnResourceNotFoundWhenIdDoesNotExistAndClientLogged() {
+
+        given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + clientToken)
+                .accept(ContentType.JSON)
+                .when()
+                .get("/orders/{id}", nonExistingOrderId)
+                .then()
+                .statusCode(404);
+    }
+
+    @Test
+    public void findByIdShouldReturnUnauthorizedWhenIdDoesNotLoggedInAdminOrClient() {
+
+        given()
+                .header("Content-type", "application/json")
+                .header("Authorization", "Bearer " + invalidToken)
+                .accept(ContentType.JSON)
+                .when()
+                .get("/orders/{id}", existingOrderId)
+                .then()
+                .statusCode(401);
+    }
 }
